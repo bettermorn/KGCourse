@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE LIMES SYSTEM "limes.dtd">
+<LIMES>
+<PREFIX>
+  <NAMESPACE>http://www.opengis.net/ont/geosparql#</NAMESPACE>
+  <LABEL>geos</LABEL>
+</PREFIX>
+<PREFIX>
+  <NAMESPACE>http://linkedgeodata.org/ontology/</NAMESPACE>
+  <LABEL>lgdo</LABEL>
+</PREFIX>
+<PREFIX>
+  <NAMESPACE>http://data.ign.fr/def/geometrie#</NAMESPACE>
+  <LABEL>geom</LABEL>
+</PREFIX>
+<SOURCE>
+  <ID>sourceId</ID>
+  <ENDPOINT>http://linkedgeodata.org/sparql</ENDPOINT>
+  <VAR>?s</VAR>
+  <PAGESIZE>2000</PAGESIZE>
+  <RESTRICTION>?s a lgdo:RelayBox</RESTRICTION>
+  <PROPERTY>geom:geometry/geos:asWKT RENAME GEOMETRY</PROPERTY>
+
+
+
+</SOURCE>
+<TARGET>
+  <ID>targetId</ID>
+  <ENDPOINT>http://linkedgeodata.org/sparql</ENDPOINT>
+  <VAR>?t</VAR>
+  <PAGESIZE>2000</PAGESIZE>
+  <RESTRICTION>?t a lgdo:RelayBox</RESTRICTION>
+  <PROPERTY>geom:geometry/geos:asWKT RENAME GEOMETRY</PROPERTY>
+
+
+
+</TARGET>
+<METRIC>
+  geo_hausdorff(s.polygon, t.polygon)
+</METRIC>
+<ACCEPTANCE>
+  <THRESHOLD>0.9</THRESHOLD>
+  <FILE>lgd_relaybox_verynear.nt</FILE>
+  <RELATION>lgdo:near</RELATION>
+</ACCEPTANCE>
+<REVIEW>
+  <THRESHOLD>0.5</THRESHOLD>
+  <FILE>lgd_relaybox_near.nt</FILE>
+  <RELATION>lgdo:near</RELATION>
+</REVIEW>
+<EXECUTION>
+  <REWRITER>DEFAULT</REWRITER>
+  <PLANNER>DEFAULT</PLANNER>
+  <ENGINE>DEFAULT</ENGINE>
+</EXECUTION>
+<OUTPUT>TAB</OUTPUT>
+</LIMES>
