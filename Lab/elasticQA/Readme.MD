@@ -4,6 +4,7 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
 # 运行软件环境
 * elasticSearch 7.3
 * Python 2.7
+* django 
 ## Python 依赖库
 * django
 * jieba
