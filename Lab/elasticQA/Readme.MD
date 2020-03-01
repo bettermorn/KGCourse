@@ -63,10 +63,8 @@ headers = {'Content-type': 'application/json'}
 response = requests.get("http://localhost:9200/demo/person/_search", data = query,headers= headers)
 `
 `
-def _search_single_subj(entity_name):   
-    # 修改此句
+def _search_single_subj(entity_name):       
     if res['hits']['total']['value']== 0:
-        print "entity"
 `
 ## 文件路径问题
 * views.py  写绝对地址
