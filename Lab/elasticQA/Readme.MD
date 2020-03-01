@@ -32,17 +32,19 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
    }
 }
 '
-`
+
 2.检索知识库
+`
 curl -XGET 'localhost:9200/demo/person/_search?&pretty' -H 'Content-Type:application/json' -d'
 {
 
   "query":
     { "bool":{
       "must":{ 
-        "term":{"subj":"\u59da\u660e"}
+        "term":{"subj": "姚明"}
        } 
     }
  } 
  }
 '
+`
