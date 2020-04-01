@@ -2,13 +2,20 @@
 http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示例
 
 # 运行软件环境
-* elasticSearch 7.3
+* Anaconda 3     之spider
+* elasticSearch 7.3  
 * Python 2.7  注：此代码可做参考，未来可以升级到3.7，因为Python2.7以后不会再被维护。
 * django 3.0.3
 ## Python 依赖库
 * django  3.0.3
 * jieba   
 * pyahocorasick
+## 运行步骤
+#1.启动Anaconda3， 选中elasticQA环境，打开spider观看代码
+#2.启动elasticSearch   ./elasticsearch  访问 curl 'http://localhost:9200’  测试
+#3.启动 django   python manage.py runserver
+#4.访问 http://localhost:8000
+
 
 #  参考数据及命令
 1.新建index('demo')和type('person')
