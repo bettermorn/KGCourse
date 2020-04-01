@@ -11,10 +11,10 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
 * jieba   
 * pyahocorasick
 ## 运行步骤
-#1.启动Anaconda3， 选中elasticQA环境，打开spider观看代码
-#2.启动elasticSearch   ./elasticsearch  访问 curl 'http://localhost:9200’  测试
-#3.启动 django   python manage.py runserver
-#4.访问 http://localhost:8000
+* 1.启动Anaconda3， 选中elasticQA环境，打开spider观看代码
+* 2.启动elasticSearch   ./elasticsearch  访问 curl 'http://localhost:9200’  测试
+* 3.启动 django   python manage.py runserver
+* 4.访问 http://localhost:8000
 
 
 #  参考数据及命令
