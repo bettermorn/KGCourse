@@ -11,17 +11,24 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
 * jieba   
 * pyahocorasick
 ## 运行步骤
-1. 启动Anaconda3， 选中elasticQA环境，打开spider观看代码 进入conda  
->*  source ~/.bash_profile  
->*  conda activate elasticQAPy27
-
-2. 启动 django   
->* cd code/kbdemo
->* python manage.py runserver
-3. 启动elasticSearch   
-* ./elasticsearch  
+1. 启动Anaconda3， 选中elasticQA环境，打开spider观看代码。以下为进入conda  的命令行方式
+```
+source ~/.bash_profile  
+conda activate elasticQAPy27
+```
+也可以使用conda的可视化界面 "open terminal"
+2. 启动 django  
+``` 
+cd code/kbdemo
+python manage.py runserver
+```
+3. 启动elasticSearch 
+```
+cd elasticsearch-7.6.0/bin 
+./elasticsearch  
+```
 * 访问 curl 'http://localhost:9200’  测试是否成功
-4. 系统入口
+5. 系统入口
 * 访问 http://localhost:8000
 
 
@@ -73,14 +80,14 @@ curl -XGET 'localhost:9200/demo/person/_search?&pretty' -H 'Content-Type:applica
 
 ## Request 与Response方法
 * views.py  增加Content-Type
-`
+```
 headers = {'Content-type': 'application/json'}
 response = requests.get("http://localhost:9200/demo/person/_search", data = query,headers= headers)
-`
-`
+```
+```
 def _search_single_subj(entity_name):       
     if res['hits']['total']['value']== 0:
-`
+```
 ## 文件路径问题
 * views.py  写绝对地址
 ## 优化
