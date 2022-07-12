@@ -11,7 +11,7 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
 * jieba   
 * pyahocorasick
 ## 运行步骤
-1. 启动Anaconda3， 选中elasticQA环境，打开spider观看代码。以下为进入conda  的命令行方式
+1. 启动Anaconda3， 选中elasticQA环境，打开spider观看代码。MacOS进入conda 的命令行方式如下：
 ```
 source ~/.bash_profile  
 conda activate elasticQAPy27
@@ -27,14 +27,14 @@ python manage.py runserver
 cd elasticsearch-7.6.0/bin 
 ./elasticsearch  
 ```
-* 访问 curl 'http://localhost:9200’  测试是否成功
-5. 系统入口
+* 访问 curl 'http://localhost:9200’  测试elasticsearch是否启动成功
+4. 语义搜索系统入口
 * 访问 http://localhost:8000
 
 
 #  参考数据及命令
 1. 新建index('demo')和type('person')
-*
+* 输入
 ```
 curl -XPUT 'localhost:9200/demo?include_type_name=true' -H 'Content-Type: application/json' -d'
 {
@@ -57,7 +57,7 @@ curl -XPUT 'localhost:9200/demo?include_type_name=true' -H 'Content-Type: applic
 }
 '
 ```
-返回 {"acknowledged":true,"shards_acknowledged":true,"index":"demo"}  
+* 返回 {"acknowledged":true,"shards_acknowledged":true,"index":"demo"}  
 2. 检索知识库
 
 ```
