@@ -11,13 +11,12 @@ http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示
 * jieba   
 * pyahocorasick
 ## 运行步骤
-1. 启动Anaconda3， 选中elasticQA环境，打开spider观看代码。MacOS进入conda 的命令行方式如下：
+1. 启动Anaconda环境的控制台。启动Anaconda可视化界面，选中elasticQA环境，“open terminal"，打开spider查看项目代码。也可以用命令行方式，MacOS进入conda 的命令行方式如下：
 ```
 source ~/.bash_profile  
 conda activate elasticQAPy27
 ```
-也可以使用conda的可视化界面 "open terminal"
-2. 启动 django  
+2. 在conda的控制台启动 django  
 ``` 
 cd code/kbdemo
 python manage.py runserver
