@@ -33,9 +33,9 @@ cd elasticsearch-7.6.0/bin
 
 
 #  参考数据及命令
-1.新建index('demo')和type('person')
+1. 新建index('demo')和type('person')
 *
-`
+```
 curl -XPUT 'localhost:9200/demo?include_type_name=true' -H 'Content-Type: application/json' -d'
 {
         "mappings": {
@@ -56,11 +56,11 @@ curl -XPUT 'localhost:9200/demo?include_type_name=true' -H 'Content-Type: applic
        }
 }
 '
-`
+```
 返回 {"acknowledged":true,"shards_acknowledged":true,"index":"demo"}  
-2.检索知识库
+2. 检索知识库
 
-`
+```
 curl -XGET 'localhost:9200/demo/person/_search?&pretty' -H 'Content-Type:application/json' -d'
 {
 
@@ -73,10 +73,11 @@ curl -XGET 'localhost:9200/demo/person/_search?&pretty' -H 'Content-Type:applica
  } 
  }
 '
-`
+```
 # 3.修改调整过的代码
 ## 设置文件
-* settings.py  ALLOWED_HOSTS = ['localhost', '127.0.0.1']  django 设置文件
+* django 设置文件 settings.py  
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']  
 
 ## Request 与Response方法
 * views.py  增加Content-Type
