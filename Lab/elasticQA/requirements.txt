@@ -3,4 +3,4 @@
 django==1.11.28
 jieba==0.42.1
 pyahocorasick==1.4.0
-
+requests
