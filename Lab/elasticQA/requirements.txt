@@ -1,5 +1,5 @@
 #python==2.7
-django==3.0.3
+django==1.11.28#3.0.3
 jieba==0.42.1
 pyahocorasick==1.4.0
 
