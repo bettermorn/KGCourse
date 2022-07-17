@@ -57,7 +57,10 @@ curl -XPUT 'localhost:9200/demo?include_type_name=true' -H 'Content-Type: applic
 '
 ```
 * 返回 {"acknowledged":true,"shards_acknowledged":true,"index":"demo"}  
-2. 检索知识库
+2. 运行
+`python insert.py`
+
+3. 检索知识库
 
 ```
 curl -XGET 'localhost:9200/demo/person/_search?&pretty' -H 'Content-Type:application/json' -d'
