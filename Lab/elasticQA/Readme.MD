@@ -26,7 +26,9 @@ python manage.py runserver
 cd elasticsearch-7.6.0/bin 
 ./elasticsearch  
 ```
+
 * 访问 curl 'http://localhost:9200’  测试elasticsearch是否启动成功
+* 可能出现的问题 ：curl: (52) Empty reply from server 修改方法：在 /config/elasticsearch.yml 中修改 xpack.security.enabled: false 参考链接 https://stackoverflow.com/questions/66772673/parse-server-curl-52-empty-reply-from-server
 4. 语义搜索系统入口
 * 访问 http://localhost:8000
 
