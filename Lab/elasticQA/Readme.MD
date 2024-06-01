@@ -1,5 +1,5 @@
 # 参考项目
-http://openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示例
+http://data.openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示例
 
 # 运行软件环境
 * Anaconda 3     之spider
