@@ -1,6 +1,12 @@
 # 参考项目
 http://data.openkg.cn/tool/elasticsearch-kbqa  基于elasticsearch的KBQA实现及示例
 
+# elasticQAPy3.11Code.zip 运行依赖
+* elasticSearch 7.3.2  
+* Python 3.11.4
+* Django   4.2.3
+
+
 # 运行软件环境
 * Anaconda 3     之spider
 * elasticSearch 7.3  
